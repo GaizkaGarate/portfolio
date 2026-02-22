@@ -64,7 +64,7 @@ const GlassOrb = () => {
                 <defs>
                     <filter id="glass-distort" x="-50%" y="-50%" width="200%" height="200%" colorInterpolationFilters="sRGB">
                         <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="5" result="noise" />
-                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="14" xChannelSelector="R" yChannelSelector="G" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G" />
                     </filter>
                 </defs>
             </svg>
@@ -98,7 +98,7 @@ const GlassOrb = () => {
                             position: 'absolute',
                             inset: 0,
                             borderRadius: '50%',
-                            backdropFilter: 'blur(5px) brightness(1.1) saturate(1.3)',
+                            backdropFilter: 'blur(2px) brightness(1) saturate(1.3)',
                             WebkitBackdropFilter: 'blur(5px) brightness(1.1) saturate(1.3)',
                             filter: 'url(#glass-distort)',
                         }}
