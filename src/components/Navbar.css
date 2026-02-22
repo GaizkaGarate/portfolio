@@ -1,0 +1,87 @@
+.nav-wrap {
+    border: 1px solid var(--gray);
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 500px;
+    position: relative;
+    box-shadow: inset 10px 0 10px black;
+    background: linear-gradient(0deg, #141414, #242424);
+}
+
+.nav-wrap:after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: -5px;
+    background: linear-gradient(180deg, var(--gray), #212121);
+    border-radius: 500px;
+    z-index: -1;
+}
+
+.nav {
+    width: fit-content;
+    anchor-name: --nav;
+    margin: 6.7px;
+    display: flex;
+}
+
+.nav a {
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+    padding: 16px 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    opacity: 0.2;
+}
+
+.nav a.active {
+    anchor-name: --active;
+    color: black;
+}
+
+.nav a:hover:before {
+    anchor-name: --nav;
+}
+
+.bubble {
+    background: white;
+    /* z-index: 5; */
+    /* Fallback */
+    position: absolute;
+    transition: all 0.2s;
+    border-radius: 500px;
+    pointer-events: none;
+}
+
+@supports (position-anchor: --active) {
+    .bubble {
+        top: anchor(top);
+        right: anchor(right);
+        bottom: anchor(bottom);
+        left: anchor(left);
+    }
+}
+
+.bubble.active {
+    position-anchor: --active;
+    z-index: 2;
+    background: linear-gradient(180deg, #f2f2f2, #b3b3b3);
+    box-shadow: inset 0 2px 7px #fff;
+}
+
+.bubble.hover {
+    z-index: 1;
+    background: linear-gradient(180deg, var(--gray), #212121);
+    box-shadow: inset 0 2px 7px #ffffff29;
+    position-anchor: --nav;
+}
