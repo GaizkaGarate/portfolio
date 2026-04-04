@@ -4,7 +4,17 @@ const projects = [
     {
         title: 'AI + DevOps Pipeline',
         desc: 'Integración de Jenkins CI con herramientas de IA para documentar automáticamente los commits de cada instancia de CI durante mis prácticas en Openbravo.',
-        tags: ['Python', 'Jenkins', 'CI/CD', 'AI', 'DevOps'],
+        tags: ['Python', 'Gitlab', 'CI/CD', 'AI', 'DevOps'],
+        badge: 'En desarrollo',
+        badgeColor: 'rgba(59,130,246,0.15)',
+        badgeTextColor: '#93c5fd',
+        badgeBorder: 'rgba(59,130,246,0.25)',
+        topLineTint: 'rgba(59,130,246,0.18)',
+    },
+    {
+        title: 'Gitlab-Pipeline-editor',
+        desc: 'Editor de pipelines de Gitlab para facilitar la creación y gestión de pipelines de CI/CD. Pagina web https://gitlab-pipeline-editor.vercel.app/',
+        tags: ['React', 'Gitlab', 'CI/CD', 'AI', 'DevOps'],
         badge: 'En desarrollo',
         badgeColor: 'rgba(59,130,246,0.15)',
         badgeTextColor: '#93c5fd',
